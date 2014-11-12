@@ -21,7 +21,15 @@
   </div>
   <div class="field">
     <%= f.label :day %><br>
-    <%= f.date_select :day %>
+    <%= select(:dance_class, :day, [
+        ["Mon", "Monday"],
+        ["Tue", "Tuesday"],
+        ["Wen", "Wednesday"],
+        ["Thu", "Thursday"],
+        ["Fri", "Friday"],
+        ["Sat", "Saturday"],
+        ["Sun", "Sunday"],        
+      ]) %>
   </div>
   <div class="actions">
     <%= f.submit %>
