@@ -2,17 +2,22 @@ class ArticlesController < ApplicationController
   
   def index
     @articles = Article.all
+    @bla = "blabla"
   end 
   
   def new
-    
+    @article = Article.new
+    @bla = "blabla"
   end
   
   def create
     @article = Article.new(article_params)
  
-    @article.save
-    redirect_to @article
+    if @article.save
+      redirect_to @article
+    else    
+      render 'new'
+    end
     
 #    render plain: params[:article].inspect
   end

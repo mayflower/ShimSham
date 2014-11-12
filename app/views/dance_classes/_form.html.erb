@@ -1,0 +1,29 @@
+<%= form_for(@dance_class) do |f| %>
+  <% if @dance_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dance_class.errors.count, "error") %> prohibited this dance_class from being saved:</h2>
+
+      <ul>
+      <% @dance_class.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :level_id %><br>
+    <%= collection_select(:dance_class, :level_id, Level.all, :id, :name, {:prompt => false}) %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br>
+    <%= f.date_select :day %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

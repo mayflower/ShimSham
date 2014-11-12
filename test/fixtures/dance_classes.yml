@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Lindy Hop
+  level_id: 1
+  day: 2014-11-11
+
+two:
+  name: Lindy Hop
+  level_id: 1
+  day: 2014-11-11

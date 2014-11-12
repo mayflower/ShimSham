@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dance_class.name %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @dance_class.level_id %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @dance_class.day %>
+</p>
+
+<%= link_to 'Edit', edit_dance_class_path(@dance_class) %> |
+<%= link_to 'Back', dance_classes_path %>
