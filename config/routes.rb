@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :students
+
   resources :instructors
 
   resources :dance_classes
