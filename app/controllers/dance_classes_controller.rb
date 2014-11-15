@@ -5,6 +5,7 @@ class DanceClassesController < ApplicationController
   # GET /dance_classes.json
   def index
     @dance_classes = DanceClass.all
+    
   end
 
   # GET /dance_classes/1
