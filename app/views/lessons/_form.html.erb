@@ -11,6 +11,16 @@
     </div>
   <% end %>
 
+    <div class="field">
+      <%= f.label :dance_class %><br>
+      <%= collection_select(:lesson, :dance_class_id, DanceClass.all, :id, :name, {:prompt => false}) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :instructor %><br>
+      <%= collection_check_boxes(:lesson, :instructor_ids, Instructor.all, :id, :name, {:prompt => false}) %>
+    </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
