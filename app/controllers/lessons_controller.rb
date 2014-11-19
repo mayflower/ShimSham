@@ -40,6 +40,15 @@ class LessonsController < ApplicationController
   # PATCH/PUT /lessons/1
   # PATCH/PUT /lessons/1.json
   def update
+    @lesson.instructors.destroy_all
+    new_values = params[:lesson]
+    new_values['instructor_ids'].each do |instructor_id|
+      if instructor_id != ''
+        instructor = Instructor.where(:id => instructor_id)
+        @lesson.instructors << instructor
+      end
+    end
+
     respond_to do |format|
       if @lesson.update(lesson_params)
         format.html { redirect_to @lesson, notice: 'Lesson was successfully updated.' }
@@ -68,7 +77,11 @@ class LessonsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    # def lesson_params
+    #   params[:lesson]
+    # end
+
     def lesson_params
-      params[:lesson]
+      params.require(:lesson).permit(:dance_class_id)
     end
 end
