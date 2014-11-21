@@ -11,9 +11,20 @@
     <% @lessons.each do |lesson| %>
       <tr>
         <td><%= lesson.dance_class.name%></td>
-        <%= lesson.instructors.each do |instructor| %>
-            <td><%= instructor.name %></td>
-        <% end %>
+        <td>
+          <table>
+              <%= lesson.instructors.each do |instructor| %>
+                <tr><td><%= instructor.name %></td></tr>
+              <% end %>
+          </table>
+        </td>
+        <td>
+          <table>
+              <%= lesson.students.each do |student| %>
+                <tr><td><%= student.name %></td></tr>
+              <% end %>
+          </table>
+        </td>
         <td><%= link_to 'Show', lesson %></td>
         <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
         <td><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>

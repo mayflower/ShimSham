@@ -26,6 +26,12 @@ class LessonsController < ApplicationController
   def create
     @lesson = Lesson.new(lesson_params)
 
+    params[:lesson]['instructor_ids'].each do |instructor_id|
+      if instructor_id != ''
+        instructor = Instructor.where(:id => instructor_id)
+        @lesson.instructors << instructor
+      end
+    end
     respond_to do |format|
       if @lesson.save
         format.html { redirect_to @lesson, notice: 'Lesson was successfully created.' }
@@ -41,11 +47,19 @@ class LessonsController < ApplicationController
   # PATCH/PUT /lessons/1.json
   def update
     @lesson.instructors.destroy_all
-    new_values = params[:lesson]
-    new_values['instructor_ids'].each do |instructor_id|
+    @lesson.students.destroy_all
+
+    params[:lesson]['instructor_ids'].each do |instructor_id|
       if instructor_id != ''
         instructor = Instructor.where(:id => instructor_id)
         @lesson.instructors << instructor
+      end
+    end
+
+    params[:lesson]['student_ids'].each do |student_id|
+      if student_id != ''
+        student = Student.where(:id => student_id)
+        @lesson.students << student
       end
     end
 
