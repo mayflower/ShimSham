@@ -58,13 +58,13 @@ ActiveRecord::Schema.define(version: 20141121135603) do
   end
 
   create_table "lessons", force: true do |t|
-    t.integer  "DanceClass_id"
+    t.integer  "dance_class_id"
     t.datetime "scheduled"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "lessons", ["DanceClass_id"], name: "index_lessons_on_DanceClass_id"
+  add_index "lessons", ["dance_class_id"], name: "index_lessons_on_dance_class_id"
 
   create_table "lessons_instructors", id: false, force: true do |t|
     t.integer "lessons_id"
