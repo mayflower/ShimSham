@@ -3,8 +3,8 @@ class AddStudentProperties < ActiveRecord::Migration
     fields = {
         :last_name => "string",
         :street => "string",
-        :zip => "string",
-        :city => "integer",
+        :zip => "integer",
+        :city => "string",
         :phone => "string"
     }
     fields.each do |field, type|

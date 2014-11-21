@@ -55,8 +55,8 @@ ActiveRecord::Schema.define(version: 20141121092024) do
     t.datetime "updated_at"
     t.string   "last_name"
     t.string   "street"
-    t.string   "zip"
-    t.integer  "city"
+    t.integer  "zip"
+    t.string   "city"
     t.string   "phone"
   end
 
