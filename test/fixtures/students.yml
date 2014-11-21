@@ -1,23 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  street: MyString
-  zip: MyString
-  city: MyString
-  phone: MyString
-  country: MyString
+  name: Micha Trieba
+  street: Leonrodstr. 34
+  zip: 80636
+  city: München
+  phone: 0163 4793733
+  country: Germany
   groups_id: 
   DanceClasses_id: 
-  email: MyString
+  email: micha@triebawerker.de
 
 two:
-  name: MyString
-  street: MyString
-  zip: MyString
-  city: MyString
-  phone: MyString
-  country: MyString
+  name: Flo Fackler
+  street: Anton-Bruckner-Str. 43
+  zip: 85276
+  city: Pfaffenhofen
+  phone: 0152
+  country: Germany
   groups_id: 
   DanceClasses_id: 
-  email: MyString
+  email: flo.fackler@mayflower.de

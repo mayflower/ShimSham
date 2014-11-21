@@ -1,0 +1,1 @@
+Instructor.create({"name" => "Angela"})
