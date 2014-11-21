@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyText
+  name: 4-6 Jahre
+  description: Anfaengerkurs
 
 two:
-  name: MyString
-  description: MyText
+  name: Intermediate
+  description: Intermediate

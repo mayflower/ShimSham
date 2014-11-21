@@ -1,20 +1,20 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  duration: 1
-  price: 9.99
-  max_students: 1
-  description: MyText
+  name: Lollipops
+  duration: 45
+  price: 35
+  max_students: 15
+  description: Kindertanz
   room_id: 1
   group_id: 1
 
 two:
-  name: MyString
-  duration: 1
-  price: 9.99
-  max_students: 1
-  description: MyText
-  room_id: 1
-  group_id: 1
+  name: Lindy Hop
+  duration: 60
+  price: 15
+  max_students: 12
+  description: Lindy Hop
+  room_id: 2
+  group_id: 2
 

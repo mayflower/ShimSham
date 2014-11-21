@@ -7,8 +7,6 @@ one:
   city: München
   phone: 0163 4793733
   country: Germany
-  groups_id: 
-  DanceClasses_id: 
   email: micha@triebawerker.de
 
 two:
@@ -18,6 +16,4 @@ two:
   city: Pfaffenhofen
   phone: 0152
   country: Germany
-  groups_id: 
-  DanceClasses_id: 
   email: flo.fackler@mayflower.de
