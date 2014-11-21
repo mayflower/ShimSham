@@ -1,20 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Danceclass:</strong>
-  <%= @lesson.DanceClass %>
+  <strong>Dance class:</strong>
+  <%= @lesson.dance_class.name %>
 </p>
 
 <p>
   <strong>Students:</strong>
-  <%= @lesson.Students %>
+  <ul>
+  <% @lesson.students.each do |student| %>
+    <li><%= student.inspect %></li>
+  <% end %>
+  </ul>
 </p>
-
+<% if false %>
 <p>
   <strong>Instructors:</strong>
   <%= @lesson.Instructors %>
 </p>
-
+<% end %>
 <p>
   <strong>Scheduled:</strong>
   <%= @lesson.scheduled %>

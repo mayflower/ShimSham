@@ -38,11 +38,6 @@ ActiveRecord::Schema.define(version: 20141121135603) do
     t.integer "room_id"
   end
 
-  create_table "dance_classes_students", id: false, force: true do |t|
-    t.integer "dance_class_id"
-    t.integer "student_id"
-  end
-
   create_table "groups", force: true do |t|
     t.string   "name"
     t.text     "description"
@@ -69,6 +64,11 @@ ActiveRecord::Schema.define(version: 20141121135603) do
   create_table "lessons_instructors", id: false, force: true do |t|
     t.integer "lessons_id"
     t.integer "instructors_id"
+  end
+
+  create_table "lessons_students", id: false, force: true do |t|
+    t.integer "lesson_id"
+    t.integer "student_id"
   end
 
   create_table "rooms", force: true do |t|

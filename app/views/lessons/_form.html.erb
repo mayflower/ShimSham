@@ -12,17 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :DanceClass_id %><br>
+    <%= f.label :dance_class_id  %><br>
     <%= f.collection_select(:dance_class_id, DanceClass.all, :id, :name) %>
   </div>
+
+
   <div class="field">
     <%= f.label :Students_id %><br>
-    <%= f.text_field :Students_id %>
+    <%= f.select :student_ids, Student.all.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
   </div>
+
+
+    <% if false %>
+
   <div class="field">
     <%= f.label :Instructors_id %><br>
     <%= f.text_field :Instructors_id %>
   </div>
+
+        <% end %>
+
   <div class="field">
     <%= f.label :scheduled %><br>
     <%= f.datetime_select :scheduled %>

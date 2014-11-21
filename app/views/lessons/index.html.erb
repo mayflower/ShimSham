@@ -14,9 +14,7 @@
   <tbody>
     <% @lessons.each do |lesson| %>
       <tr>
-        <td><%= lesson.DanceClass %></td>
-        <td><%= lesson.Students %></td>
-        <td><%= lesson.Instructors %></td>
+        <td><%= lesson.dance_class.name %></td>
         <td><%= lesson.scheduled %></td>
         <td><%= link_to 'Show', lesson %></td>
         <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
