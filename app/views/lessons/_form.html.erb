@@ -24,7 +24,7 @@
 
 
     <div class="field">
-      <%= f.label :instructor_id %><br>
+      <%= f.label :instructor_ids %><br>
       <%= f.select :instructor_ids, Instructor.all.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
     </div>
 
