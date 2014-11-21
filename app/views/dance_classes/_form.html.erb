@@ -16,20 +16,28 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :level_id %><br>
-    <%= collection_select(:dance_class, :level_id, Level.all, :id, :name, {:prompt => false}) %>
+    <%= f.label :duration %><br>
+    <%= f.number_field :duration %>
   </div>
   <div class="field">
-    <%= f.label :day %><br>
-    <%= select(:dance_class, :day, [
-        ["Mon", "Monday"],
-        ["Tue", "Tuesday"],
-        ["Wen", "Wednesday"],
-        ["Thu", "Thursday"],
-        ["Fri", "Friday"],
-        ["Sat", "Saturday"],
-        ["Sun", "Sunday"],        
-      ]) %>
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :max_students %><br>
+    <%= f.number_field :max_students %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :room_id %><br>
+    <%= f.collection_select(:room_id, Room.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :group_id %><br>
+    <%= f.collection_select(:group_id, Group.all, :id, :name) %>
   </div>
   <div class="actions">
     <%= f.submit %>

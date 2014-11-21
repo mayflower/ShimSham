@@ -5,5 +5,10 @@
   <%= @instructor.name %>
 </p>
 
+<p>
+  <strong>Description:</strong>
+  <%= @instructor.description %>
+</p>
+
 <%= link_to 'Edit', edit_instructor_path(@instructor) %> |
 <%= link_to 'Back', instructors_path %>

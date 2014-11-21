@@ -4,8 +4,12 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Level</th>
-      <th>Day</th>
+      <th>Duration</th>
+      <th>Price</th>
+      <th>Max students</th>
+      <th>Description</th>
+      <th>Room</th>
+      <th>Group</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +18,12 @@
     <% @dance_classes.each do |dance_class| %>
       <tr>
         <td><%= dance_class.name %></td>
-        <td><%= dance_class.level.name %></td>
-        <td><%= dance_class.day %></td>
+        <td><%= dance_class.duration %></td>
+        <td><%= dance_class.price %></td>
+        <td><%= dance_class.max_students %></td>
+        <td><%= dance_class.description %></td>
+        <td><%= dance_class.room %></td>
+        <td><%= dance_class.group %></td>
         <td><%= link_to 'Show', dance_class %></td>
         <td><%= link_to 'Edit', edit_dance_class_path(dance_class) %></td>
         <td><%= link_to 'Destroy', dance_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>

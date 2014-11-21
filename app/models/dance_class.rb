@@ -1,6 +1,4 @@
 class DanceClass < ActiveRecord::Base
-  belongs_to :level
-  has_many :lessons
-  
-  validates :name, presence: true
+  belongs_to :room
+  belongs_to :group
 end

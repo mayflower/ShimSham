@@ -6,13 +6,33 @@
 </p>
 
 <p>
-  <strong>Level:</strong>
-  <%= @dance_class.level_id %>
+  <strong>Duration:</strong>
+  <%= @dance_class.duration %>
 </p>
 
 <p>
-  <strong>Day:</strong>
-  <%= @dance_class.day %>
+  <strong>Price:</strong>
+  <%= @dance_class.price %>
+</p>
+
+<p>
+  <strong>Max students:</strong>
+  <%= @dance_class.max_students %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dance_class.description %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @dance_class.room.name %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @dance_class.group.name %>
 </p>
 
 <%= link_to 'Edit', edit_dance_class_path(@dance_class) %> |

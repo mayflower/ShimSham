@@ -11,53 +11,72 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121092024) do
+ActiveRecord::Schema.define(version: 20141121124717) do
 
   create_table "dance_classes", force: true do |t|
     t.string   "name"
-    t.integer  "level_id"
-    t.string   "day"
+    t.integer  "duration"
+    t.decimal  "price"
+    t.integer  "max_students"
+    t.text     "description"
+    t.integer  "room_id"
+    t.integer  "group_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "dance_classes", ["group_id"], name: "index_dance_classes_on_group_id"
+  add_index "dance_classes", ["room_id"], name: "index_dance_classes_on_room_id"
+
+  create_table "groups", force: true do |t|
+    t.string   "name"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "instructors", force: true do |t|
     t.string   "name"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "instructors_lessons", id: false, force: true do |t|
-    t.integer "lesson_id"
-    t.integer "instructor_id"
   end
 
   create_table "lessons", force: true do |t|
+    t.integer  "DanceClass_id"
+    t.integer  "Students_id"
+    t.integer  "Instructors_id"
+    t.datetime "scheduled"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "dance_class_id"
   end
 
-  create_table "lessons_students", id: false, force: true do |t|
-    t.integer "lesson_id"
-    t.integer "student_id"
-  end
+  add_index "lessons", ["DanceClass_id"], name: "index_lessons_on_DanceClass_id"
+  add_index "lessons", ["Instructors_id"], name: "index_lessons_on_Instructors_id"
+  add_index "lessons", ["Students_id"], name: "index_lessons_on_Students_id"
 
-  create_table "levels", force: true do |t|
+  create_table "rooms", force: true do |t|
     t.string   "name"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "students", force: true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "last_name"
     t.string   "street"
-    t.integer  "zip"
+    t.string   "zip"
     t.string   "city"
     t.string   "phone"
+    t.string   "country"
+    t.integer  "groups_id"
+    t.integer  "DanceClasses_id"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
+
+  add_index "students", ["DanceClasses_id"], name: "index_students_on_DanceClasses_id"
+  add_index "students", ["groups_id"], name: "index_students_on_groups_id"
 
 end

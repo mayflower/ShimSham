@@ -5,7 +5,6 @@ class DanceClassesController < ApplicationController
   # GET /dance_classes.json
   def index
     @dance_classes = DanceClass.all
-    
   end
 
   # GET /dance_classes/1
@@ -26,7 +25,6 @@ class DanceClassesController < ApplicationController
   # POST /dance_classes.json
   def create
     @dance_class = DanceClass.new(dance_class_params)
-    @levels = Level.all
 
     respond_to do |format|
       if @dance_class.save
@@ -71,6 +69,6 @@ class DanceClassesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dance_class_params
-      params.require(:dance_class).permit(:name, :level_id, :day)
+      params.require(:dance_class).permit(:name, :duration, :price, :max_students, :description, :room_id, :group_id)
     end
 end

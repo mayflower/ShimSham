@@ -26,12 +26,6 @@ class LessonsController < ApplicationController
   def create
     @lesson = Lesson.new(lesson_params)
 
-    params[:lesson]['instructor_ids'].each do |instructor_id|
-      if instructor_id != ''
-        instructor = Instructor.where(:id => instructor_id)
-        @lesson.instructors << instructor
-      end
-    end
     respond_to do |format|
       if @lesson.save
         format.html { redirect_to @lesson, notice: 'Lesson was successfully created.' }
@@ -46,23 +40,6 @@ class LessonsController < ApplicationController
   # PATCH/PUT /lessons/1
   # PATCH/PUT /lessons/1.json
   def update
-    @lesson.instructors.destroy_all
-    @lesson.students.destroy_all
-
-    params[:lesson]['instructor_ids'].each do |instructor_id|
-      if instructor_id != ''
-        instructor = Instructor.where(:id => instructor_id)
-        @lesson.instructors << instructor
-      end
-    end
-
-    params[:lesson]['student_ids'].each do |student_id|
-      if student_id != ''
-        student = Student.where(:id => student_id)
-        @lesson.students << student
-      end
-    end
-
     respond_to do |format|
       if @lesson.update(lesson_params)
         format.html { redirect_to @lesson, notice: 'Lesson was successfully updated.' }
@@ -91,11 +68,7 @@ class LessonsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    # def lesson_params
-    #   params[:lesson]
-    # end
-
     def lesson_params
-      params.require(:lesson).permit(:dance_class_id)
+      params.require(:lesson).permit(:DanceClass_id, :Students_id, :Instructors_id, :scheduled)
     end
 end

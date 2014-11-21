@@ -2,6 +2,22 @@
 
 one:
   name: MyString
+  street: MyString
+  zip: MyString
+  city: MyString
+  phone: MyString
+  country: MyString
+  groups_id: 
+  DanceClasses_id: 
+  email: MyString
 
 two:
   name: MyString
+  street: MyString
+  zip: MyString
+  city: MyString
+  phone: MyString
+  country: MyString
+  groups_id: 
+  DanceClasses_id: 
+  email: MyString

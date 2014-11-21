@@ -18,7 +18,7 @@ class DanceClassesControllerTest < ActionController::TestCase
 
   test "should create dance_class" do
     assert_difference('DanceClass.count') do
-      post :create, dance_class: { day: @dance_class.day, level_id: @dance_class.level_id, name: @dance_class.name }
+      post :create, dance_class: { description: @dance_class.description, duration: @dance_class.duration, group_id: @dance_class.group_id, max_students: @dance_class.max_students, name: @dance_class.name, price: @dance_class.price, room_id: @dance_class.room_id }
     end
 
     assert_redirected_to dance_class_path(assigns(:dance_class))
@@ -35,7 +35,7 @@ class DanceClassesControllerTest < ActionController::TestCase
   end
 
   test "should update dance_class" do
-    patch :update, id: @dance_class, dance_class: { day: @dance_class.day, level_id: @dance_class.level_id, name: @dance_class.name }
+    patch :update, id: @dance_class, dance_class: { description: @dance_class.description, duration: @dance_class.duration, group_id: @dance_class.group_id, max_students: @dance_class.max_students, name: @dance_class.name, price: @dance_class.price, room_id: @dance_class.room_id }
     assert_redirected_to dance_class_path(assigns(:dance_class))
   end
 

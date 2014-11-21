@@ -1,8 +1,7 @@
 require 'test_helper'
 
 class InstructorTest < ActiveSupport::TestCase
-#  test "Instructor must have a name" do
-#    instructor = Instructor.new
-#    assert_not instructor.save
-#  end
+  # test "the truth" do
+  #   assert true
+  # end
 end

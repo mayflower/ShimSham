@@ -1,4 +1,24 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Danceclass:</strong>
+  <%= @lesson.DanceClass %>
+</p>
+
+<p>
+  <strong>Students:</strong>
+  <%= @lesson.Students %>
+</p>
+
+<p>
+  <strong>Instructors:</strong>
+  <%= @lesson.Instructors %>
+</p>
+
+<p>
+  <strong>Scheduled:</strong>
+  <%= @lesson.scheduled %>
+</p>
+
 <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
 <%= link_to 'Back', lessons_path %>
