@@ -59,16 +59,12 @@ ActiveRecord::Schema.define(version: 20141121135603) do
 
   create_table "lessons", force: true do |t|
     t.integer  "DanceClass_id"
-    t.integer  "Students_id"
-    t.integer  "Instructors_id"
     t.datetime "scheduled"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "lessons", ["DanceClass_id"], name: "index_lessons_on_DanceClass_id"
-  add_index "lessons", ["Instructors_id"], name: "index_lessons_on_Instructors_id"
-  add_index "lessons", ["Students_id"], name: "index_lessons_on_Students_id"
 
   create_table "lessons_instructors", id: false, force: true do |t|
     t.integer "lessons_id"
@@ -89,14 +85,9 @@ ActiveRecord::Schema.define(version: 20141121135603) do
     t.string   "city"
     t.string   "phone"
     t.string   "country"
-    t.integer  "groups_id"
-    t.integer  "DanceClasses_id"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "students", ["DanceClasses_id"], name: "index_students_on_DanceClasses_id"
-  add_index "students", ["groups_id"], name: "index_students_on_groups_id"
 
 end

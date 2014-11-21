@@ -22,8 +22,8 @@
         <td><%= dance_class.price %></td>
         <td><%= dance_class.max_students %></td>
         <td><%= dance_class.description %></td>
-        <td><%= dance_class.room %></td>
-        <td><%= dance_class.group %></td>
+        <td><%= dance_class.room.name %></td>
+        <td><%= dance_class.group.name %></td>
         <td><%= link_to 'Show', dance_class %></td>
         <td><%= link_to 'Edit', edit_dance_class_path(dance_class) %></td>
         <td><%= link_to 'Destroy', dance_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>

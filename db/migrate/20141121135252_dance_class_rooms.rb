@@ -1,4 +1,4 @@
-class RoomsDanceClass < ActiveRecord::Migration
+class DanceClassRooms < ActiveRecord::Migration
   def change
     create_table :dance_classes_rooms, id: false do |t|
       t.integer :dance_class_id

@@ -7,8 +7,6 @@ class CreateStudents < ActiveRecord::Migration
       t.string :city
       t.string :phone
       t.string :country
-      t.references :groups, index: true
-      t.references :DanceClasses, index: true
       t.string :email
 
       t.timestamps
