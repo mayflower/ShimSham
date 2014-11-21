@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  dance_class_id: 1
+  dance_class: one
   scheduled: 2014-11-21 13:35:11
+  students: [one, two]
+  instructors: [two]
 
 two:
-  dance_class_id: 2
+  dance_class: two
   scheduled: 2014-11-21 13:35:11
+  students: [two]
+  instructors: [one, two]

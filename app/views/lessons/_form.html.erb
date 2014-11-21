@@ -18,19 +18,15 @@
 
 
   <div class="field">
-    <%= f.label :Students_id %><br>
+    <%= f.label :student_ids %><br>
     <%= f.select :student_ids, Student.all.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
   </div>
 
 
-    <% if false %>
-
-  <div class="field">
-    <%= f.label :Instructors_id %><br>
-    <%= f.text_field :Instructors_id %>
-  </div>
-
-        <% end %>
+    <div class="field">
+      <%= f.label :instructor_id %><br>
+      <%= f.select :instructor_ids, Instructor.all.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
+    </div>
 
   <div class="field">
     <%= f.label :scheduled %><br>

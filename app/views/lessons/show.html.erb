@@ -9,16 +9,20 @@
   <strong>Students:</strong>
   <ul>
   <% @lesson.students.each do |student| %>
-    <li><%= student.inspect %></li>
+    <li><%= student.name %></li>
   <% end %>
   </ul>
 </p>
-<% if false %>
+
 <p>
   <strong>Instructors:</strong>
-  <%= @lesson.Instructors %>
+    <ul>
+      <% @lesson.instructors.each do |instructor| %>
+          <li><%= instructor.name %></li>
+      <% end %>
+    </ul>
 </p>
-<% end %>
+
 <p>
   <strong>Scheduled:</strong>
   <%= @lesson.scheduled %>

@@ -1,3 +1,4 @@
 class Group < ActiveRecord::Base
-  has_and_belongs_to_many :dance_classes
+  has_many :dance_classes
+  has_many :students
 end

@@ -6,8 +6,8 @@ one:
   price: 35
   max_students: 15
   description: Kindertanz
-  room_id: 1
-  group_id: 1
+  room: one
+  group: one
 
 two:
   name: Lindy Hop
@@ -15,6 +15,5 @@ two:
   price: 15
   max_students: 12
   description: Lindy Hop
-  room_id: 2
-  group_id: 2
-
+  room: two
+  group: two

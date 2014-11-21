@@ -1,5 +1,7 @@
 class DanceClass < ActiveRecord::Base
-  has_and_belongs_to_many :room
-  has_and_belongs_to_many :group
+  belongs_to :room
+  belongs_to :group
   has_many :lessons
+  has_and_belongs_to_many :students
+  has_and_belongs_to_many :instructors
 end
