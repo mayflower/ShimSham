@@ -7,9 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'shared/navi'  %>
-<%= yield %>
-      <%= debug(params) if Rails.env.development? %>
-
+<%= nav_bar :static => :top, :brand => "Shim Sham", :responsive => true do %>
+    <%= menu_group do %>
+        <%= menu_divider %>
+        <%= drop_down "Administrate" do %>
+            <%= menu_item "Dance Classes", dance_classes_path %>
+            <%= menu_item "Students", students_path %>
+            <%= menu_item "Instructors", instructors_path %>
+            <%= menu_item "Groups", groups_path %>
+            <%= menu_item "Rooms", rooms_path %>
+            <%= menu_item "Lessons", lessons_path %>
+        <% end %>
+    <% end %>
+<% end %>
+<div class="container">
+    <%= yield %>
+</div>
+<% #= debug(params) if Rails.env.development? %>
 </body>
 </html>
