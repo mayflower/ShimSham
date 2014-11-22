@@ -11,35 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, :class => "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :duration %><br>
-    <%= f.number_field :duration %>
+  <div class="form-group">
+    <%= f.label :duration %>
+    <%= f.number_field :duration, :class => "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
+  <div class="form-group">
+    <%= f.label :price %>
+    <%= f.text_field :price, :class => "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :max_students %><br>
-    <%= f.number_field :max_students %>
+  <div class="form-group">
+    <%= f.label :max_students %>
+    <%= f.number_field :max_students, :class => "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, :class => "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :room_id %><br>
-    <%= f.collection_select(:room_id, Room.all, :id, :name) %>
+  <div class="form-group">
+    <%= f.label :room_id %>
+    <%= f.collection_select(:room_id, Room.all, :id, :name, {}, { :class => "form-control" }) %>
   </div>
-  <div class="field">
-    <%= f.label :group_id %><br>
-    <%= f.collection_select(:group_id, Group.all, :id, :name) %>
+  <div class="form-group">
+    <%= f.label :group_id %>
+    <%= f.collection_select(:group_id, Group.all, :id, :name, {}, { :class => "form-control" }) %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "btn btn-primary" %>
   </div>
 <% end %>

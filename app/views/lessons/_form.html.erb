@@ -11,28 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :dance_class_id  %><br>
-    <%= f.collection_select(:dance_class_id, DanceClass.all, :id, :name) %>
+  <div class="form-group">
+    <%= f.label :dance_class_id  %>
+    <%= f.collection_select(:dance_class_id, DanceClass.all, :id, :name, {}, {:class => "form-control"}) %>
   </div>
 
 
-  <div class="field">
-    <%= f.label :student_ids %><br>
-    <%= f.select :student_ids, Student.all.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
+  <div class="form-group">
+    <%= f.label :student_id %>
+    <%= f.select :student_ids, Student.all.collect {|x| [x.name, x.id]}, {}, :multiple => true, :class => "form-control" %>
   </div>
 
-    <div class="field">
-      <%= f.label :instructor_ids %><br>
-      <%= f.select :instructor_ids, Instructor.all.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
+    <div class="form-group">
+      <%= f.label :instructor_id %>
+      <%= f.select :instructor_ids, Instructor.all.collect {|x| [x.name, x.id]}, {}, :multiple => true, :class => "form-control" %>
     </div>
 
-  <div class="field">
-    <%= f.label :scheduled %><br>
+  <div class="form-group">
+    <%= f.label :scheduled %>
     <%= f.datetime_select :scheduled %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "btn btn-primary" %>
   </div>
 <% end %>

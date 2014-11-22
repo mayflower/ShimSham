@@ -11,42 +11,42 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, :class => "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :street %><br>
-    <%= f.text_field :street %>
+  <div class="form-group">
+    <%= f.label :street %>
+    <%= f.text_field :street, :class => "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :zip %><br>
-    <%= f.text_field :zip %>
+  <div class="form-group">
+    <%= f.label :zip %>
+    <%= f.text_field :zip, :class => "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
+  <div class="form-group">
+    <%= f.label :city %>
+    <%= f.text_field :city, :class => "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
+  <div class="form-group">
+    <%= f.label :phone %>
+    <%= f.text_field :phone, :class => "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :country %><br>
-    <%= f.text_field :country %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+  <div class="form-group">
+    <%= f.label :country %>
+    <%= f.text_field :country, :class => "form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label :dance_class_ids %><br>
-    <%= f.select :dance_class_ids, DanceClass.all.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.text_field :email, :class => "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dance_class_ids %>
+    <%= f.select :dance_class_ids, DanceClass.all.collect {|x| [x.name, x.id]}, {}, :multiple => true, :class => "form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "btn btn-primary" %>
   </div>
 <% end %>
