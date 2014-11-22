@@ -1,5 +1,7 @@
 class WelcomeController < ApplicationController
   def index
-    @name = "Micha"
+    @instructors = Instructor.count
+    @lessons = Lesson.count
+    @classes = DanceClass.count
   end
 end
