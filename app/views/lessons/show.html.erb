@@ -1,32 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Dance class:</strong>
-  <%= @lesson.dance_class.name %>
-</p>
+<table class="table table-striped">
+  <tr>
+    <th>Dance class:</th>
+    <td><%= @lesson.dance_class.name %></td>
+  </tr>
 
-<p>
-  <strong>Students:</strong>
-  <ul>
-  <% @lesson.students.each do |student| %>
-    <li><%= student.name %></li>
-  <% end %>
-  </ul>
-</p>
+  <tr>
+    <th>Students:</th>
+    <td>
+      <ul>
+        <% @lesson.students.each do |student| %>
+            <li><%= student.name %></li>
+        <% end %>
+      </ul>
+    </td>
+  </tr>
 
-<p>
-  <strong>Instructors:</strong>
-    <ul>
-      <% @lesson.instructors.each do |instructor| %>
-          <li><%= instructor.name %></li>
-      <% end %>
-    </ul>
-</p>
+  <tr>
+    <th>Instructors:</th>
+    <td>
+      <ul>
+        <% @lesson.instructors.each do |instructor| %>
+            <li><%= instructor.name %></li>
+        <% end %>
+      </ul>
+    </td>
+  </tr>
 
-<p>
-  <strong>Scheduled:</strong>
-  <%= @lesson.scheduled %>
-</p>
+  <tr>
+    <th>Scheduled:</th>
+    <td><%= @lesson.scheduled %></td>
+  </tr>
+</table>
 
-<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
-<%= link_to 'Back', lessons_path %>
+<%= link_to 'Edit', edit_lesson_path(@lesson), :class => "btn btn-default" %>
+<%= link_to 'Back', lessons_path, :class => "btn btn-primary" %>

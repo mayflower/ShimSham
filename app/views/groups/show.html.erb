@@ -1,14 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @group.name %>
-</p>
+<table class="table table-striped">
+  <tr>
+    <th>Name:</th>
+    <td><%= @group.name %></td>
+  </tr>
 
-<p>
-  <strong>Description:</strong>
-  <%= @group.description %>
-</p>
+  <tr>
+    <th>Description:</th>
+    <td><%= @group.description %></td>
+  </tr>
+</table>
 
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>
+
+<%= link_to 'Edit', edit_group_path(@group), :class => "btn btn-default" %>
+<%= link_to 'Back', groups_path, :class => "btn btn-primary" %>

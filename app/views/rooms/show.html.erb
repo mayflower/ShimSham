@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @room.name %>
-</p>
+<table class="table table-striped">
+  <tr>
+  <th>Name:</th>
+  <td><%= @room.name %></td>
+</tr>
 
-<p>
-  <strong>Description:</strong>
-  <%= @room.description %>
-</p>
-
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+<tr>
+  <th>Description:</th>
+  <td><%= @room.description %></td>
+</tr>
+</table>
+<%= link_to 'Edit', edit_room_path(@room), :class => "btn btn-default" %>
+<%= link_to 'Back', rooms_path, :class => "btn btn-primary" %>

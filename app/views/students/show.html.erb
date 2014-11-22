@@ -1,49 +1,49 @@
 <p id="notice"><%= notice %></p>
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <td><%= @student.name %></td>
+  </tr>
+  <tr>
+    <th>Street</th>
+    <td><%= @student.street %></td>
+  </tr>
 
-<p>
-  <strong>Name:</strong>
-  <%= @student.name %>
-</p>Rooms
+  <tr>
+    <th>Zip</th>
+    <td><%= @student.zip %></td>
+  </tr>
 
-<p>
-  <strong>Street:</strong>
-  <%= @student.street %>
-</p>
+  <tr>
+    <th>City</th>
+    <td><%= @student.city %></td>
+  </tr>
 
-<p>
-  <strong>Zip:</strong>
-  <%= @student.zip %>
-</p>
+  <tr>
+    <th>Phone</th>
+    <td><%= @student.phone %></td>
+  </tr>
 
-<p>
-  <strong>City:</strong>
-  <%= @student.city %>
-</p>
+  <tr>
+    <th>Country</th>
+    <td><%= @student.country %></td>
+  </tr>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @student.phone %>
-</p>
+  <tr>
+    <th>Group</th>
+    <td><% @student.group.inspect %></td>
+  </tr>
 
-<p>
-  <strong>Country:</strong>
-  <%= @student.country %>
-</p>
+  <tr>
+    <th>Email</th>
+    <td><%= @student.email %></td>
+  </tr>
 
-<p>
-  <strong>Groups:</strong>
-  <%= @student.group %>
-</p>
+  <tr>
+    <th>Number of classes</th>
+    <td><%= @student.dance_classes.count %></td>
+  </tr>
+</table>
 
-<p>
-  <strong>Email:</strong>
-  <%= @student.email %>
-</p>
-
-<p>
-  <strong>Number of classes:</strong>
-  <%= @student.dance_classes.count %>
-</p>
-
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+<%= link_to 'Edit', edit_student_path(@student), :class => "btn btn-default" %>
+<%= link_to 'Back', students_path, :class => "btn btn-primary" %>

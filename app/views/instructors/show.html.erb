@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @instructor.name %>
-</p>
+<table class="table table-striped">
+  <tr>
+    <th>Name:</th>
+    <td><%= @instructor.name %></td>
+  </tr>
 
-<p>
-  <strong>Description:</strong>
-  <%= @instructor.description %>
-</p>
+  <tr>
+    <th>Description:</th>
+    <td><%= @instructor.description %></td>
+  </tr>
+</table>
 
-<%= link_to 'Edit', edit_instructor_path(@instructor) %> |
-<%= link_to 'Back', instructors_path %>
+<%= link_to 'Edit', edit_instructor_path(@instructor), :class => "btn btn-default" %>
+<%= link_to 'Back', instructors_path, :class => "btn btn-primary" %>
