@@ -37,11 +37,6 @@
   </div>
 
     <div class="field">
-      <%= f.label :dance_class_id %><br>
-      <%= f.select :dance_class_id, DanceClass.all.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
-    </div>
-
-    <div class="field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
