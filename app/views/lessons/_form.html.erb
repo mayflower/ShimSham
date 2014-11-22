@@ -22,7 +22,6 @@
     <%= f.select :student_ids, Student.all.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
   </div>
 
-
     <div class="field">
       <%= f.label :instructor_ids %><br>
       <%= f.select :instructor_ids, Instructor.all.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
@@ -32,6 +31,7 @@
     <%= f.label :scheduled %><br>
     <%= f.datetime_select :scheduled %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

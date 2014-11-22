@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121135603) do
+ActiveRecord::Schema.define(version: 20141122141342) do
 
   create_table "dance_classes", force: true do |t|
     t.string   "name"
@@ -27,6 +27,11 @@ ActiveRecord::Schema.define(version: 20141121135603) do
 
   add_index "dance_classes", ["group_id"], name: "index_dance_classes_on_group_id"
   add_index "dance_classes", ["room_id"], name: "index_dance_classes_on_room_id"
+
+  create_table "dance_classes_students", id: false, force: true do |t|
+    t.integer "dance_class_id"
+    t.integer "student_id"
+  end
 
   create_table "groups", force: true do |t|
     t.string   "name"

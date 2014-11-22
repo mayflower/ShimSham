@@ -40,5 +40,10 @@
   <%= @student.email %>
 </p>
 
+<p>
+  <strong>Number of classes:</strong>
+  <%= @student.dance_classes.count %>
+</p>
+
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>
