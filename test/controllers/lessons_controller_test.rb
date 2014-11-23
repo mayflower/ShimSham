@@ -3,6 +3,12 @@ require 'test_helper'
 class LessonsControllerTest < ActionController::TestCase
   setup do
     @lesson = lessons(:one)
+    @dance_class = dance_classes(:one)
+    @dance_class_2 = dance_classes(:two)
+    @student_2 = students(:two)
+    @student = students(:one)
+    @instructor = instructors(:one)
+    @instructor_2 = instructors(:two)
   end
 
   test "should get index" do
@@ -18,7 +24,7 @@ class LessonsControllerTest < ActionController::TestCase
 
   test "should create lesson" do
     assert_difference('Lesson.count') do
-      post :create, lesson: { DanceClass_id: @lesson.DanceClass_id, Instructors_id: @lesson.Instructors_id, Students_id: @lesson.Students_id, scheduled: @lesson.scheduled }
+      post :create, lesson: { dance_class_id: @dance_class.id, instructors: @instructor, students: @student, scheduled: "2015-01-01 10:00:00" }
     end
 
     assert_redirected_to lesson_path(assigns(:lesson))
@@ -35,7 +41,7 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test "should update lesson" do
-    patch :update, id: @lesson, lesson: { DanceClass_id: @lesson.DanceClass_id, Instructors_id: @lesson.Instructors_id, Students_id: @lesson.Students_id, scheduled: @lesson.scheduled }
+    patch :update, id: @lesson, lesson: { dance_class_id: @dance_class_2.id, instructors: @instructor_2.id, students: @student_2.id, scheduled: "2016-01-01 11:00:00" }
     assert_redirected_to lesson_path(assigns(:lesson))
   end
 
