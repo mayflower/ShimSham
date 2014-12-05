@@ -41,6 +41,8 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'devise'
+
 group :development, :test do
   gem 'sqlite3'
 end
