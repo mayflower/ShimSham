@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
+  get 'sessions/login'
+  get 'sessions/logout'
+  post 'sessions/login'
+
   devise_for :users
   resources :rooms
-
   resources :groups
-
   resources :lessons
-
   resources :students
-
   resources :instructors
-
   resources :dance_classes
-
   resources :levels
 
   get 'welcome/index'

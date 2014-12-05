@@ -1,9 +1,23 @@
-require 'bcrypt'
+roleAdmin = Role.create({ 'name' => 'admin' })
+roleStudent = Role.create({ 'name' => 'student' })
+roleInstructor = Role.create({ 'name' => 'instructor' })
 
-role = Role.create({ 'name' => 'admin' })
-user =  User.create({
-                'email' => 'admin1@shimsham.com',
-                'password' => BCrypt::Password.create('password')
-            })
+userAdmin =  User.create({
+                             'name' => 'admin',
+                             'email' => 'admin@shimsham.com',
+                             'password' => 'password'
+                         })
+userInstructor =  User.create({
+                                  'name' => 'instructor',
+                                  'email' => 'instructor@shimsham.com',
+                                  'password' => 'password'
+                              })
+userStudent =  User.create({
+                               'name' => 'student',
+                               'email' => 'student@shimsham.com',
+                               'password' => 'password'
+                           })
 
-user.roles=[role]
+userAdmin.roles = [roleAdmin, roleInstructor, roleStudent]
+userInstructor.roles = [roleInstructor, roleStudent]
+userStudent.roles = [roleStudent]

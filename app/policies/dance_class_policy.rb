@@ -1,3 +1,0 @@
-class DanceClassPolicy < ApplicationPolicy
-
-end
