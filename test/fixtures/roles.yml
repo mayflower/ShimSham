@@ -1,7 +1,8 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+admin:
+  name: admin
 
-one:
-  name: MyString
+student:
+  name: student
 
-two:
-  name: MyString
+instructor:
+  name: instructor

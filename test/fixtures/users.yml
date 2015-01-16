@@ -4,11 +4,20 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {
-  email: a@b.de
-  }
+one:
+  email: admin@shimsham.com
+  encrypted_password: '$2a$10$fxJUgKw57cUGsn1riVoPBuwP3U4XIuGn2EwnnthZkQ9KCO5wgvQcy'
+  name: admin
+  roles: [admin, instructor, student]
 
-#
-two: {
-  email: a@c.de
-}
+two:
+  email: instructor@shimsham.com
+  encrypted_password: '$2a$10$cPMWNslnvo7A9L09RQV6dO.sGIYfWjvbWFNFEWphhXqVtdWD5lJ4C'
+  name: instructor
+  roles: [instructor]
+
+three:
+  email: student@shimsham.com
+  encrypted_password: '$2a$10$WtX48.41OnUr7tpqYj95TeKo34aX29Ixj8s/huhAKiEPp/s8PX1Zy'
+  name: student
+  roles: [student]
