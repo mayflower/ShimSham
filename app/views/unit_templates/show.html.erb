@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Offer:</strong>
+  <%= @unit_template.offer %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @unit_template.price %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @unit_template.duration %>
+</p>
+
+<p>
+  <strong>Max students:</strong>
+  <%= @unit_template.max_students %>
+</p>
+
+<p>
+  <strong>Unit interval:</strong>
+  <%= @unit_template.unit_interval %>
+</p>
+
+<p>
+  <strong>Lesson interval:</strong>
+  <%= @unit_template.lesson_interval %>
+</p>
+
+<%= link_to 'Edit', edit_unit_template_path(@unit_template) %> |
+<%= link_to 'Back', unit_templates_path %>

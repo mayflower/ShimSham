@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  offer_id: 
+  price: 1.5
+  duration: 1
+  max_students: 1
+  unit_interval: MyString
+  lesson_interval: MyString
+
+two:
+  offer_id: 
+  price: 1.5
+  duration: 1
+  max_students: 1
+  unit_interval: MyString
+  lesson_interval: MyString

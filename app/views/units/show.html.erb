@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Unittemplate:</strong>
+  <%= @unit.UnitTemplate %>
+</p>
+
+<p>
+  <strong>Instructor:</strong>
+  <%= @unit.Instructor %>
+</p>
+
+<p>
+  <strong>Students:</strong>
+  <%= @unit.students %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @unit.room %>
+</p>
+
+<%= link_to 'Edit', edit_unit_path(@unit) %> |
+<%= link_to 'Back', units_path %>

@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :units
+
+  resources :unit_templates
+
+  resources :offers
+
   get 'sessions/login'
   get 'sessions/logout'
   post 'sessions/login'
