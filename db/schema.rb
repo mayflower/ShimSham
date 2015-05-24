@@ -11,7 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150116172822) do
+ActiveRecord::Schema.define(version: 20150523210710) do
+
+  create_table "articles", force: true do |t|
+    t.string   "title"
+    t.text     "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "dance_classes", force: true do |t|
+    t.string   "name"
+    t.integer  "duration"
+    t.decimal  "price"
+    t.integer  "max_students"
+    t.text     "description"
+    t.integer  "room_id"
+    t.integer  "group_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "dance_classes", ["group_id"], name: "index_dance_classes_on_group_id"
+  add_index "dance_classes", ["room_id"], name: "index_dance_classes_on_room_id"
+
+  create_table "dance_classes_students", id: false, force: true do |t|
+    t.integer "dance_class_id"
+    t.integer "student_id"
+  end
+
+  create_table "groups", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "instructors", force: true do |t|
     t.string   "name"
@@ -26,11 +60,14 @@ ActiveRecord::Schema.define(version: 20150116172822) do
   end
 
   create_table "lessons", force: true do |t|
-    t.datetime "sceduled"
-    t.integer  "room_id"
+    t.integer  "dance_class_id"
+    t.datetime "scheduled"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "room_id"
   end
+
+  add_index "lessons", ["dance_class_id"], name: "index_lessons_on_dance_class_id"
 
   create_table "lessons_students", id: false, force: true do |t|
     t.integer "lesson_id"
@@ -91,18 +128,21 @@ ActiveRecord::Schema.define(version: 20150116172822) do
   add_index "unit_templates", ["offer_id"], name: "index_unit_templates_on_offer_id"
 
   create_table "units", force: true do |t|
-    t.integer  "UnitTemplate_id"
-    t.integer  "Instructor_id"
-    t.integer  "students_id"
+    t.integer  "unit_template_id"
+    t.integer  "instructor_id"
     t.integer  "room_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "units", ["Instructor_id"], name: "index_units_on_Instructor_id"
-  add_index "units", ["UnitTemplate_id"], name: "index_units_on_UnitTemplate_id"
+  add_index "units", ["instructor_id"], name: "index_units_on_instructor_id"
   add_index "units", ["room_id"], name: "index_units_on_room_id"
-  add_index "units", ["students_id"], name: "index_units_on_students_id"
+  add_index "units", ["unit_template_id"], name: "index_units_on_unit_template_id"
+
+  create_table "students_units", id: false, force: true do |t|
+    t.integer "unit_id"
+    t.integer "student_id"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
