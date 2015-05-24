@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150523210710) do
-
-  create_table "articles", force: true do |t|
-    t.string   "title"
-    t.text     "text"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20150524084136) do
 
   create_table "dance_classes", force: true do |t|
     t.string   "name"
@@ -114,6 +107,11 @@ ActiveRecord::Schema.define(version: 20150523210710) do
     t.datetime "updated_at"
   end
 
+  create_table "students_units", id: false, force: true do |t|
+    t.integer "unit_id"
+    t.integer "student_id"
+  end
+
   create_table "unit_templates", force: true do |t|
     t.integer  "offer_id"
     t.float    "price"
@@ -138,11 +136,6 @@ ActiveRecord::Schema.define(version: 20150523210710) do
   add_index "units", ["instructor_id"], name: "index_units_on_instructor_id"
   add_index "units", ["room_id"], name: "index_units_on_room_id"
   add_index "units", ["unit_template_id"], name: "index_units_on_unit_template_id"
-
-  create_table "students_units", id: false, force: true do |t|
-    t.integer "unit_id"
-    t.integer "student_id"
-  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
