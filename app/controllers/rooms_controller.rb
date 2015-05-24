@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
   before_filter :authenticate_user!
+  before_action :set_room, only: [:show, :edit, :update, :destroy]
 
   # GET /rooms
   # GET /rooms.json

@@ -1,4 +1,5 @@
 class UnitTemplatesController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_unit_template, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
