@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  unit_template: LindyUnit
+  instructor: christine
+  students: micha, flo
+  room: roterSalon
+
+two:
+  unit_template: BallettUnit
+  instructor: angela
+  students: flo, micha
+  room: gruenerSalon

@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+lollipops:
   name: Lollipops
   duration: 45
   price: 35
   max_students: 15
   description: Kindertanz
-  room: one
-  group: one
+  room: roterSalon
+  group: beginners
 
-two:
+lindyhop:
   name: Lindy Hop
   duration: 60
   price: 15
   max_students: 12
   description: Lindy Hop
-  room: two
-  group: two
+  room: gruenerSalon
+  group: intermediate

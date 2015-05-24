@@ -1,0 +1,41 @@
+<%= form_for(@unit_template) do |f| %>
+  <% if @unit_template.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@unit_template.errors.count, "error") %> prohibited this unit_template from being saved:</h2>
+
+      <ul>
+      <% @unit_template.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :offer_id %><br>
+    <%= f.text_field :offer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.number_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :max_students %><br>
+    <%= f.number_field :max_students %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_interval %><br>
+    <%= f.text_field :unit_interval %>
+  </div>
+  <div class="field">
+    <%= f.label :lesson_interval %><br>
+    <%= f.text_field :lesson_interval %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

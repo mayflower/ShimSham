@@ -1,0 +1,35 @@
+<h1>Listing unit_templates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Offer</th>
+      <th>Price</th>
+      <th>Duration</th>
+      <th>Max students</th>
+      <th>Unit interval</th>
+      <th>Lesson interval</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @unit_templates.each do |unit_template| %>
+      <tr>
+        <td><%= unit_template.offer %></td>
+        <td><%= unit_template.price %></td>
+        <td><%= unit_template.duration %></td>
+        <td><%= unit_template.max_students %></td>
+        <td><%= unit_template.unit_interval %></td>
+        <td><%= unit_template.lesson_interval %></td>
+        <td><%= link_to 'Show', unit_template %></td>
+        <td><%= link_to 'Edit', edit_unit_template_path(unit_template) %></td>
+        <td><%= link_to 'Destroy', unit_template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Unit template', new_unit_template_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+LindyUnit:
+  price: 15.00
+  duration: 60
+  max_students: 10
+  unit_interval: 3 month
+  lesson_interval: week
+
+BallettUnit:
+  price: 15.00
+  duration: 45
+  max_students: 6
+  unit_interval: 1 month
+  lesson_interval: week
