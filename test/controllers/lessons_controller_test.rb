@@ -3,12 +3,14 @@ require 'test_helper'
 class LessonsControllerTest < ActionController::TestCase
   setup do
     @lesson = lessons(:one)
-    @dance_class = dance_classes(:one)
-    @dance_class_2 = dance_classes(:two)
-    @student_2 = students(:two)
-    @student = students(:one)
-    @instructor = instructors(:one)
-    @instructor_2 = instructors(:two)
+    @dance_class = dance_classes(:lollipops)
+    @dance_class_2 = dance_classes(:lindyhop)
+    @student_2 = students(:micha)
+    @student = students(:flo)
+    @instructor = instructors(:christine)
+    @instructor_2 = instructors(:angela)
+
+    sign_in users(:admin)
   end
 
   test "should get index" do

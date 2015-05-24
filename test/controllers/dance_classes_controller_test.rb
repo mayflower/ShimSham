@@ -2,7 +2,8 @@ require 'test_helper'
 
 class DanceClassesControllerTest < ActionController::TestCase
   setup do
-    @dance_class = dance_classes(:one)
+    @dance_class = dance_classes(:lollipops)
+    sign_in users(:admin)
   end
 
   test "should get index" do

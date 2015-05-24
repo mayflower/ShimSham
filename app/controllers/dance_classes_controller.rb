@@ -1,4 +1,5 @@
 class DanceClassesController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_dance_class, only: [:show, :edit, :update, :destroy]
 
   # GET /dance_classes

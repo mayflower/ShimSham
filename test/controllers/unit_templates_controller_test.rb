@@ -2,7 +2,9 @@ require 'test_helper'
 
 class UnitTemplatesControllerTest < ActionController::TestCase
   setup do
-    @unit_template = unit_templates(:one)
+    @unit_template = unit_templates(:LindyUnit)
+
+    sign_in users(:admin)
   end
 
   test "should get index" do

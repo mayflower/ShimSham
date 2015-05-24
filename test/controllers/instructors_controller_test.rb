@@ -2,7 +2,8 @@ require 'test_helper'
 
 class InstructorsControllerTest < ActionController::TestCase
   setup do
-    @instructor = instructors(:one)
+    @instructor = instructors(:christine)
+    sign_in users(:admin)
   end
 
   test "should get index" do

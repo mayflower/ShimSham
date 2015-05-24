@@ -2,11 +2,13 @@ require 'test_helper'
 
 class RoomsControllerTest < ActionController::TestCase
   setup do
-    @room = rooms(:one)
+    @room = rooms(:roterSalon)
+    sign_in users(:admin)
   end
 
   test "should get index" do
     get :index
+
     assert_response :success
     assert_not_nil assigns(:rooms)
   end
