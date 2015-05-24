@@ -3,6 +3,7 @@ require 'test_helper'
 class UnitsControllerTest < ActionController::TestCase
   setup do
     @unit = units(:one)
+
     sign_in users(:admin)
   end
 
@@ -19,7 +20,7 @@ class UnitsControllerTest < ActionController::TestCase
 
   test "should create unit" do
     assert_difference('Unit.count') do
-      post :create, unit: { Instructor_id: @unit.Instructor_id, UnitTemplate_id: @unit.UnitTemplate_id, room_id: @unit.room_id, students_id: @unit.students_id }
+      post :create, unit: { instructor_id: @unit.instructor_id, unit_template_id: @unit.unit_template_id, room_id: @unit.room_id, students: @unit.students }
     end
 
     assert_redirected_to unit_path(assigns(:unit))
@@ -36,7 +37,7 @@ class UnitsControllerTest < ActionController::TestCase
   end
 
   test "should update unit" do
-    patch :update, id: @unit, unit: { Instructor_id: @unit.Instructor_id, UnitTemplate_id: @unit.UnitTemplate_id, room_id: @unit.room_id, students_id: @unit.students_id }
+    patch :update, id: @unit, unit: { instructor_id: @unit.instructor_id, unit_template_id: @unit.unit_template_id, room_id: @unit.room_id, students: @unit.students }
     assert_redirected_to unit_path(assigns(:unit))
   end
 
