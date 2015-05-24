@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :UnitTemplate_id %><br>
-    <%= f.text_field :UnitTemplate_id %>
+    <%= f.label :unit_template_id %><br>
+    <%= f.text_field :unit_template_id %>
   </div>
   <div class="field">
-    <%= f.label :Instructor_id %><br>
-    <%= f.text_field :Instructor_id %>
+    <%= f.label :instructor_id %><br>
+    <%= f.text_field :instructor_id %>
   </div>
-  <div class="field">
-    <%= f.label :students_id %><br>
-    <%= f.text_field :students_id %>
-  </div>
+    <div class="form-group">
+      <%= f.label :student_id %>
+      <%= f.select :student_ids, Student.all.collect {|x| [x.name, x.id]}, {}, :multiple => true, :class => "form-control" %>
+    </div>
   <div class="field">
     <%= f.label :room_id %><br>
     <%= f.text_field :room_id %>
