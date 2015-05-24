@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  dance_class: one
+  dance_class: lollipops
   scheduled: 2014-11-21 13:35:11
-  students: [one, two]
-  instructors: [two]
+  students: micha, flo
+  instructors: christine
 
 two:
-  dance_class: two
+  dance_class: lindyhop
   scheduled: 2014-11-21 13:35:11
-  students: [two]
-  instructors: [one, two]
+  students: flo
+  instructors: angela

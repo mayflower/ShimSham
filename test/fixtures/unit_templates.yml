@@ -1,17 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  offer_id: 
-  price: 1.5
-  duration: 1
-  max_students: 1
-  unit_interval: MyString
-  lesson_interval: MyString
+LindyUnit:
+  price: 15.00
+  duration: 60
+  max_students: 10
+  unit_interval: 3 month
+  lesson_interval: week
 
-two:
-  offer_id: 
-  price: 1.5
-  duration: 1
-  max_students: 1
-  unit_interval: MyString
-  lesson_interval: MyString
+BallettUnit:
+  price: 15.00
+  duration: 45
+  max_students: 6
+  unit_interval: 1 month
+  lesson_interval: week

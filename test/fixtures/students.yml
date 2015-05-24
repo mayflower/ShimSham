@@ -1,6 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+micha:
   name: Micha Trieba
   street: Leonrodstr. 34
   zip: 80636
@@ -9,7 +9,7 @@ one:
   country: Germany
   email: micha@triebawerker.de
 
-two:
+flo:
   name: Flo Fackler
   street: Anton-Bruckner-Str. 43
   zip: 85276
