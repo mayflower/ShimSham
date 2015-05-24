@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <td><%= @dance_class.name %></td>
+  </tr>
+  <tr>
+    <th>Duration:</th>
+    <td><%= @dance_class.duration %></td>
+  </tr>
+  <tr>
+    <th>Price:</th>
+    <td><%= @dance_class.price %></td>
+  </tr>
+
+  <tr>
+    <th>Max students</th>
+    <td><%= @dance_class.max_students %></td>
+  </tr>
+
+  <tr>
+    <th>Description</th>
+    <td><%= @dance_class.description %></td>
+  </tr>
+
+  <tr>
+    <th>Room:</th>
+    <td><%= @dance_class.room.name %></td>
+  </tr>
+
+  <tr>
+    <th>Group:</th>
+    <td>    <%= @dance_class.group.name %>
+    </td>
+  </tr>
+</table>
+
+<%= link_to 'Edit', edit_dance_class_path(@dance_class), :class => "btn btn-default" %>
+<%= link_to 'Back', dance_classes_path, :class => "btn btn-primary" %>
